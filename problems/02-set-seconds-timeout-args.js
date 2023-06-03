@@ -12,6 +12,9 @@ with the examples below.
 
 Examples:
 
+// use spread
+// arg1 is delay, then ...arguments
+
 function printSum(num1, num2, num3) {
     console.log(num1 + num2 + num3);
 }
@@ -23,8 +26,10 @@ setSecondsTimeoutArgs(function(arg1, arg2) {
 ***********************************************************************/
 
 function setSecondsTimeoutArgs(cb, delayInSeconds, ...args) {
-  // Your code here
+  setTimeout(cb, (delayInSeconds*1000), ...args)
 }
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
